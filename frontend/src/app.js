@@ -12,7 +12,7 @@ function App() {
   }, []);
 
   const addTodo = () => {
-    fetch('http://localhost:5000/todos', {
+    fetch('http://3.110.198.104:5000/todos', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ task: input })
