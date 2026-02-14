@@ -6,7 +6,7 @@ function App() {
   const [input, setInput] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:5000/todos')
+    fetch(`${process.env.REACT_APP_API_URL}/api/todos`)
       .then(res => res.json())
       .then(data => setTodos(data));
   }, []);
