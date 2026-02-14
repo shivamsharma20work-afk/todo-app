@@ -5,6 +5,7 @@ pipeline{
         stage('Code') {
             steps{
                 git url: "https://github.com/shivamsharma20work-afk/todo-app.git", branch: "main"
+                sh 'whoami'
 
             }
         }
