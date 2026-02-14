@@ -6,13 +6,13 @@ function App() {
   const [input, setInput] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:5000/todos')
+    fetch(`${process.env.REACT_APP_API_URL}/api/todos`)
       .then(res => res.json())
       .then(data => setTodos(data));
   }, []);
 
   const addTodo = () => {
-    fetch('http://localhost:5000/todos', {
+    fetch('http://3.110.198.104:5000/todos', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ task: input })
